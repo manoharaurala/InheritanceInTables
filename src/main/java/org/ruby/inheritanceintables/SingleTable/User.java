@@ -7,6 +7,7 @@ import java.util.UUID;
 @Entity(name = "st_users")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "user_type", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue(value = "USER")
 public class User {
     private String name;
     @Id
